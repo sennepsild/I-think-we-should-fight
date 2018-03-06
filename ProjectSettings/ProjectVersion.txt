@@ -1,5 +1,9 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 m_EditorVersion: 2017.2.0f3
 =======
 m_EditorVersion: 2017.3.1f1
 >>>>>>> ed226b25ad4a5274335263f2adc7615a00f9e486
+=======
+m_EditorVersion: 2017.1.1p4
+>>>>>>> kk
