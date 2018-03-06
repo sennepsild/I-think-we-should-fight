@@ -3,7 +3,11 @@
 --- !u!129 &1
 PlayerSettings:
   m_ObjectHideFlags: 0
+<<<<<<< HEAD
+  serializedVersion: 13
+=======
   serializedVersion: 14
+>>>>>>> ed226b25ad4a5274335263f2adc7615a00f9e486
   productGUID: 33df36e187abbd64db17c5a4db67fb5f
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
@@ -72,8 +76,11 @@ PlayerSettings:
   muteOtherAudioSources: 0
   Prepare IOS For Recording: 0
   Force IOS Speakers When Recording: 0
+<<<<<<< HEAD
+=======
   deferSystemGesturesMode: 0
   hideHomeButton: 0
+>>>>>>> ed226b25ad4a5274335263f2adc7615a00f9e486
   submitAnalytics: 1
   usePlayerLog: 1
   bakeCollisionMeshes: 0
@@ -101,9 +108,14 @@ PlayerSettings:
   n3dsDisableStereoscopicView: 0
   n3dsEnableSharedListOpt: 1
   n3dsEnableVSync: 0
+<<<<<<< HEAD
+  ignoreAlphaClear: 0
+  xboxOneResolution: 0
+=======
   xboxOneResolution: 0
   xboxOneSResolution: 0
   xboxOneXResolution: 3
+>>>>>>> ed226b25ad4a5274335263f2adc7615a00f9e486
   xboxOneMonoLoggingLevel: 0
   xboxOneLoggingLevel: 1
   xboxOneDisableEsram: 0
@@ -129,7 +141,10 @@ PlayerSettings:
   bundleVersion: 1.0
   preloadedAssets: []
   metroInputSource: 0
+<<<<<<< HEAD
+=======
   wsaTransparentSwapchain: 0
+>>>>>>> ed226b25ad4a5274335263f2adc7615a00f9e486
   m_HolographicPauseOnTrackingLoss: 1
   xboxOneDisableKinectGpuReservation: 0
   xboxOneEnable7thCore: 0
@@ -142,6 +157,14 @@ PlayerSettings:
       useSustainedPerformanceMode: 0
       enableVideoLayer: 0
       useProtectedVideoMemory: 0
+<<<<<<< HEAD
+    hololens:
+      depthFormat: 1
+  protectGraphicsMemory: 0
+  useHDRDisplay: 0
+  m_ColorGamuts: 00000000
+  targetPixelDensity: 0
+=======
       minimumSupportedHeadTracking: 0
       maximumSupportedHeadTracking: 1
     hololens:
@@ -154,6 +177,7 @@ PlayerSettings:
   useHDRDisplay: 0
   m_ColorGamuts: 00000000
   targetPixelDensity: 30
+>>>>>>> ed226b25ad4a5274335263f2adc7615a00f9e486
   resolutionScalingMode: 0
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
@@ -206,6 +230,12 @@ PlayerSettings:
   iPadLandscapeSplashScreen: {fileID: 0}
   iPadHighResLandscapeSplashScreen: {fileID: 0}
   appleTVSplashScreen: {fileID: 0}
+<<<<<<< HEAD
+  tvOSSmallIconLayers: []
+  tvOSLargeIconLayers: []
+  tvOSTopShelfImageLayers: []
+  tvOSTopShelfImageWideLayers: []
+=======
   appleTVSplashScreen2x: {fileID: 0}
   tvOSSmallIconLayers: []
   tvOSSmallIconLayers2x: []
@@ -214,6 +244,7 @@ PlayerSettings:
   tvOSTopShelfImageLayers2x: []
   tvOSTopShelfImageWideLayers: []
   tvOSTopShelfImageWideLayers2x: []
+>>>>>>> ed226b25ad4a5274335263f2adc7615a00f9e486
   iOSLaunchScreenType: 0
   iOSLaunchScreenPortrait: {fileID: 0}
   iOSLaunchScreenLandscape: {fileID: 0}
@@ -231,8 +262,11 @@ PlayerSettings:
   iOSLaunchScreeniPadFillPct: 100
   iOSLaunchScreeniPadSize: 100
   iOSLaunchScreeniPadCustomXibPath: 
+<<<<<<< HEAD
+=======
   iOSUseLaunchScreenStoryboard: 0
   iOSLaunchScreenCustomStoryboardPath: 
+>>>>>>> ed226b25ad4a5274335263f2adc7615a00f9e486
   iOSDeviceRequirements: []
   iOSURLSchemes: []
   iOSBackgroundModes: 0
@@ -244,7 +278,10 @@ PlayerSettings:
   iOSManualSigningProvisioningProfileID: 
   tvOSManualSigningProvisioningProfileID: 
   appleEnableAutomaticSigning: 0
+<<<<<<< HEAD
+=======
   clonedFromGUID: 00000000000000000000000000000000
+>>>>>>> ed226b25ad4a5274335263f2adc7615a00f9e486
   AndroidTargetDevice: 0
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
@@ -272,6 +309,8 @@ PlayerSettings:
   mobileMTRendering:
     iPhone: 1
     tvOS: 1
+<<<<<<< HEAD
+=======
   m_BuildTargetGroupLightmapEncodingQuality:
   - m_BuildTarget: Standalone
     m_EncodingQuality: 1
@@ -279,6 +318,7 @@ PlayerSettings:
     m_EncodingQuality: 1
   - m_BuildTarget: PS4
     m_EncodingQuality: 1
+>>>>>>> ed226b25ad4a5274335263f2adc7615a00f9e486
   wiiUTitleID: 0005000011000000
   wiiUGroupID: 00010000
   wiiUCommonSaveSize: 4096
@@ -325,9 +365,12 @@ PlayerSettings:
   switchTitleNames_9: 
   switchTitleNames_10: 
   switchTitleNames_11: 
+<<<<<<< HEAD
+=======
   switchTitleNames_12: 
   switchTitleNames_13: 
   switchTitleNames_14: 
+>>>>>>> ed226b25ad4a5274335263f2adc7615a00f9e486
   switchPublisherNames_0: 
   switchPublisherNames_1: 
   switchPublisherNames_2: 
@@ -340,9 +383,12 @@ PlayerSettings:
   switchPublisherNames_9: 
   switchPublisherNames_10: 
   switchPublisherNames_11: 
+<<<<<<< HEAD
+=======
   switchPublisherNames_12: 
   switchPublisherNames_13: 
   switchPublisherNames_14: 
+>>>>>>> ed226b25ad4a5274335263f2adc7615a00f9e486
   switchIcons_0: {fileID: 0}
   switchIcons_1: {fileID: 0}
   switchIcons_2: {fileID: 0}
@@ -355,9 +401,12 @@ PlayerSettings:
   switchIcons_9: {fileID: 0}
   switchIcons_10: {fileID: 0}
   switchIcons_11: {fileID: 0}
+<<<<<<< HEAD
+=======
   switchIcons_12: {fileID: 0}
   switchIcons_13: {fileID: 0}
   switchIcons_14: {fileID: 0}
+>>>>>>> ed226b25ad4a5274335263f2adc7615a00f9e486
   switchSmallIcons_0: {fileID: 0}
   switchSmallIcons_1: {fileID: 0}
   switchSmallIcons_2: {fileID: 0}
@@ -370,9 +419,12 @@ PlayerSettings:
   switchSmallIcons_9: {fileID: 0}
   switchSmallIcons_10: {fileID: 0}
   switchSmallIcons_11: {fileID: 0}
+<<<<<<< HEAD
+=======
   switchSmallIcons_12: {fileID: 0}
   switchSmallIcons_13: {fileID: 0}
   switchSmallIcons_14: {fileID: 0}
+>>>>>>> ed226b25ad4a5274335263f2adc7615a00f9e486
   switchManualHTML: 
   switchAccessibleURLs: 
   switchLegalInformation: 
@@ -414,8 +466,11 @@ PlayerSettings:
   switchLocalCommunicationIds_7: 
   switchParentalControl: 0
   switchAllowsScreenshot: 1
+<<<<<<< HEAD
+=======
   switchAllowsVideoCapturing: 1
   switchAllowsRuntimeAddOnContentInstall: 0
+>>>>>>> ed226b25ad4a5274335263f2adc7615a00f9e486
   switchDataLossConfirmation: 0
   switchSupportedNpadStyles: 3
   switchSocketConfigEnabled: 0
@@ -559,6 +614,9 @@ PlayerSettings:
   webGLUseEmbeddedResources: 0
   webGLUseWasm: 0
   webGLCompressionFormat: 1
+<<<<<<< HEAD
+  scriptingDefineSymbols: {}
+=======
   scriptingDefineSymbols:
     1: CROSS_PLATFORM_INPUT
     4: CROSS_PLATFORM_INPUT;MOBILE_INPUT
@@ -566,6 +624,7 @@ PlayerSettings:
     14: MOBILE_INPUT
     17: MOBILE_INPUT
     20: MOBILE_INPUT
+>>>>>>> ed226b25ad4a5274335263f2adc7615a00f9e486
   platformArchitecture:
     iOS: 2
   scriptingBackend:
@@ -623,6 +682,15 @@ PlayerSettings:
   n3dsTitle: GameName
   n3dsProductCode: 
   n3dsApplicationId: 0xFF3FF
+<<<<<<< HEAD
+  stvDeviceAddress: 
+  stvProductDescription: 
+  stvProductAuthor: 
+  stvProductAuthorEmail: 
+  stvProductLink: 
+  stvProductCategory: 0
+=======
+>>>>>>> ed226b25ad4a5274335263f2adc7615a00f9e486
   XboxOneProductId: 
   XboxOneUpdateKey: 
   XboxOneSandboxId: 
