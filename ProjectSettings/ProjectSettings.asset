@@ -4,7 +4,7 @@
 PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 12
-  productGUID: 9e92c0571474f4eafbd62bc1207fad27
+  productGUID: 42041c51239594c50baa2dc2212e0a70
   AndroidProfiler: 0
   defaultScreenOrientation: 4
   targetDevice: 2
@@ -138,12 +138,7 @@ PlayerSettings:
       depthFormat: 1
   protectGraphicsMemory: 0
   useHDRDisplay: 0
-<<<<<<< HEAD
-  m_ColorGamuts: 00000000
-  targetPixelDensity: 30
-=======
   targetPixelDensity: 0
->>>>>>> d99b337303f240385416389745144ae0b06b7091
   resolutionScalingMode: 0
   applicationIdentifier: {}
   buildNumber: {}
@@ -165,10 +160,10 @@ PlayerSettings:
     serializedVersion: 2
     m_Bits: 238
   iPhoneSdkVersion: 988
-  iOSTargetOSVersionString: 7.0
+  iOSTargetOSVersionString: 
   tvOSSdkVersion: 0
   tvOSRequireExtendedGameController: 0
-  tvOSTargetOSVersionString: 9.0
+  tvOSTargetOSVersionString: 
   uIPrerenderedIcon: 0
   uIRequiresPersistentWiFi: 0
   uIRequiresFullScreen: 1
@@ -412,7 +407,7 @@ PlayerSettings:
   ps4DownloadDataSize: 0
   ps4GarlicHeapSize: 2048
   ps4ProGarlicHeapSize: 2560
-  ps4Passcode: 5PN2qmWqBlQ9wQj99nsQzldVI5ZuGXbE
+  ps4Passcode: qVOw5lxuBEBNue7b9PZS0hoI6pgabi9U
   ps4pnSessions: 1
   ps4pnPresence: 1
   ps4pnFriends: 1
@@ -458,7 +453,7 @@ PlayerSettings:
   psp2LiveAreaTrialPath: 
   psp2PatchChangeInfoPath: 
   psp2PatchOriginalPackage: 
-  psp2PackagePassword: WRK5RhRXdCdG5nG5azdNMK66MuCV6GXi
+  psp2PackagePassword: OuSpM2Tlh01vOzwvSikHFswuzleht6xG
   psp2KeystoneFile: 
   psp2MemoryExpansionMode: 0
   psp2DRMType: 0
