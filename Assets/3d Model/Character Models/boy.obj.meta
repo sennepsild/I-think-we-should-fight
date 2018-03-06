@@ -1,0 +1,237 @@
+fileFormatVersion: 2
+guid: f63c4894ba47d410bb6efcc57a647bff
+timeCreated: 1520331947
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: boy_Boy_body_ply
+    100004: boy_Boy_eyeSpecLft_ply_left_eye
+    100006: boy_Boy_eyeSpecRgt_ply_right_eye
+    100008: boy_Boy_hair_ply
+    100010: boy_Boy_pants_ply
+    100012: boy_Boy_shoeLft_ply
+    100014: boy_Boy_shoeRgt_ply
+    100016: boy_Boy_tongue_ply
+    100018: Boy_jacket_ply_boy
+    100020: boy_left_eye_Boy_eyeBallLft_ply
+    100022: boy_left_eye_Boy_irisLft_ply
+    100024: boy_left_eye_Boy_retinaLft_ply
+    100026: boy_right_eye_Boy_eyeBallRgt_ply
+    100028: boy_right_eye_Boy_irisRgt_ply
+    100030: boy_right_eye_Boy_retinaRgt_ply
+    400000: //RootNode
+    400002: boy_Boy_body_ply
+    400004: boy_Boy_eyeSpecLft_ply_left_eye
+    400006: boy_Boy_eyeSpecRgt_ply_right_eye
+    400008: boy_Boy_hair_ply
+    400010: boy_Boy_pants_ply
+    400012: boy_Boy_shoeLft_ply
+    400014: boy_Boy_shoeRgt_ply
+    400016: boy_Boy_tongue_ply
+    400018: Boy_jacket_ply_boy
+    400020: boy_left_eye_Boy_eyeBallLft_ply
+    400022: boy_left_eye_Boy_irisLft_ply
+    400024: boy_left_eye_Boy_retinaLft_ply
+    400026: boy_right_eye_Boy_eyeBallRgt_ply
+    400028: boy_right_eye_Boy_irisRgt_ply
+    400030: boy_right_eye_Boy_retinaRgt_ply
+    2300000: boy_Boy_body_ply
+    2300002: boy_Boy_eyeSpecLft_ply_left_eye
+    2300004: boy_Boy_eyeSpecRgt_ply_right_eye
+    2300006: boy_Boy_hair_ply
+    2300008: boy_Boy_pants_ply
+    2300010: boy_Boy_shoeLft_ply
+    2300012: boy_Boy_shoeRgt_ply
+    2300014: boy_Boy_tongue_ply
+    2300016: Boy_jacket_ply_boy
+    2300018: boy_left_eye_Boy_eyeBallLft_ply
+    2300020: boy_left_eye_Boy_irisLft_ply
+    2300022: boy_left_eye_Boy_retinaLft_ply
+    2300024: boy_right_eye_Boy_eyeBallRgt_ply
+    2300026: boy_right_eye_Boy_irisRgt_ply
+    2300028: boy_right_eye_Boy_retinaRgt_ply
+    3300000: boy_Boy_body_ply
+    3300002: boy_Boy_eyeSpecLft_ply_left_eye
+    3300004: boy_Boy_eyeSpecRgt_ply_right_eye
+    3300006: boy_Boy_hair_ply
+    3300008: boy_Boy_pants_ply
+    3300010: boy_Boy_shoeLft_ply
+    3300012: boy_Boy_shoeRgt_ply
+    3300014: boy_Boy_tongue_ply
+    3300016: Boy_jacket_ply_boy
+    3300018: boy_left_eye_Boy_eyeBallLft_ply
+    3300020: boy_left_eye_Boy_irisLft_ply
+    3300022: boy_left_eye_Boy_retinaLft_ply
+    3300024: boy_right_eye_Boy_eyeBallRgt_ply
+    3300026: boy_right_eye_Boy_irisRgt_ply
+    3300028: boy_right_eye_Boy_retinaRgt_ply
+    4300000: boy_Boy_body_ply
+    4300002: boy_Boy_eyeSpecLft_ply_left_eye
+    4300004: boy_Boy_eyeSpecRgt_ply_right_eye
+    4300006: boy_Boy_hair_ply
+    4300008: boy_Boy_pants_ply
+    4300010: boy_Boy_shoeLft_ply
+    4300012: boy_Boy_shoeRgt_ply
+    4300014: boy_Boy_tongue_ply
+    4300016: Boy_jacket_ply_boy
+    4300018: boy_left_eye_Boy_eyeBallLft_ply
+    4300020: boy_left_eye_Boy_irisLft_ply
+    4300022: boy_left_eye_Boy_retinaLft_ply
+    4300024: boy_right_eye_Boy_eyeBallRgt_ply
+    4300026: boy_right_eye_Boy_irisRgt_ply
+    4300028: boy_right_eye_Boy_retinaRgt_ply
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Boy_jacket_ply_boyMat
+    second: {fileID: 2100000, guid: 63fdd0dc197464c6eb8e71d1391d777a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: boy_Boy_body_plyMat
+    second: {fileID: 2100000, guid: 13718043289244784b675bc9656ab195, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: boy_Boy_eyeSpecLft_ply_left_eyeMat
+    second: {fileID: 2100000, guid: 993f88fbf181445cfa9111861d2689f9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: boy_Boy_eyeSpecRgt_ply_right_eyeMat
+    second: {fileID: 2100000, guid: bb112f3cb3e4943f4ae41e1d39191861, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: boy_Boy_hair_plyMat
+    second: {fileID: 2100000, guid: 293d7ea324e1941418b6ace9b1ddceb4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: boy_Boy_pants_plyMat
+    second: {fileID: 2100000, guid: a2342d6874023487e89827264666c35a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: boy_Boy_shoeLft_plyMat
+    second: {fileID: 2100000, guid: 568ca08d6857e45ed8fcc2e08b7dfada, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: boy_Boy_shoeRgt_plyMat
+    second: {fileID: 2100000, guid: 83754efe951e84b11b1167d5f6abbff7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: boy_Boy_tongue_plyMat
+    second: {fileID: 2100000, guid: ef2ad889c01b84bab9990e5a47debfce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: boy_left_eye_Boy_eyeBallLft_plyMat
+    second: {fileID: 2100000, guid: 1b11ed804ff7c47ae9c60c3d639a8256, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: boy_left_eye_Boy_irisLft_plyMat
+    second: {fileID: 2100000, guid: 4d7ba7dc8b75545a09a017e77be01950, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: boy_left_eye_Boy_retinaLft_plyMat
+    second: {fileID: 2100000, guid: 60b03259cfddc4d62b4e57fa28aff833, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: boy_right_eye_Boy_eyeBallRgt_plyMat
+    second: {fileID: 2100000, guid: c7daf467d96f641adbd3adffc6072c86, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: boy_right_eye_Boy_irisRgt_plyMat
+    second: {fileID: 2100000, guid: ddb13b6120abd4315bae5f377ca4ffc3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: boy_right_eye_Boy_retinaRgt_plyMat
+    second: {fileID: 2100000, guid: 1af21c0d11bdc43f3b53edc4180521c9, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
