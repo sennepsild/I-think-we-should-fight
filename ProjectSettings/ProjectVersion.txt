@@ -1,5 +1,13 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+m_EditorVersion: 2017.1.1p4
+=======
 m_EditorVersion: 5.5.2f1
+>>>>>>> 994f0e541de4e14925de1e374c5f634f6956434e
+=======
+m_EditorVersion: 5.5.2f1
+>>>>>>> aae005ee3d0de2fab5c5323981efe4246c9917df
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
