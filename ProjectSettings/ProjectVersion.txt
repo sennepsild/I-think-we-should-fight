@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 m_EditorVersion: 2017.1.1p4
 =======
 m_EditorVersion: 5.5.2f1
@@ -19,3 +20,6 @@ m_EditorVersion: 2017.3.1f1
 m_EditorVersion: 2017.1.1p4
 >>>>>>> kk
 >>>>>>> 1709eaf084be54006d099a19ffcd287a74e0a745
+=======
+m_EditorVersion: 2017.3.0f3
+>>>>>>> gui---geogrgi
