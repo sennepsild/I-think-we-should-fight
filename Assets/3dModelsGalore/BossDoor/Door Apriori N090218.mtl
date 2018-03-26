@@ -1,0 +1,66 @@
+# 3ds Max Wavefront OBJ Exporter v0.94b - (c)2007 guruware
+# File Created: 09.02.2018 16:22:08
+
+newmtl st_metal_2
+	Ns 55.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 1.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.3098 0.3098 0.3098
+	Ks 1.0260 1.0260 1.0260
+	Ke 0.0000 0.0000 0.0000
+	map_Ka D:\New folder 2\gold_scr.jpg
+	map_Kd D:\New folder 2\gold_scr.jpg
+	map_bump -bm 0.3000 D:\New folder 2\gold_scr.jpg
+	bump -bm 0.3000 D:\New folder 2\gold_scr.jpg
+
+newmtl standart_metal
+	Ns 43.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 1.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.7373 0.6941 0.9098
+	Ks 0.6660 0.6660 0.6660
+	Ke 0.0000 0.0000 0.0000
+	map_Ka D:\New folder 2\MGalva01.jpg
+	map_Kd D:\New folder 2\MGalva01.jpg
+	map_bump -bm 0.3000 D:\New folder 2\MGalva01.jpg
+	bump -bm 0.3000 D:\New folder 2\MGalva01.jpg
+
+newmtl st_gold
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 1.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.9451 0.7725 0.4078
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka D:\New folder 2\Metal G6.jpg
+	map_Kd D:\New folder 2\Metal G6.jpg
+	map_bump -bm 0.3000 D:\New folder 2\Metal G6.jpg
+	bump -bm 0.3000 D:\New folder 2\Metal G6.jpg
+
+newmtl st_wood
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 1.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.9137 0.7843 0.5608
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka D:\New folder 2\MetaG6br.jpg
+	map_Kd D:\New folder 2\MetaG6br.jpg
+	map_bump -bm 0.3000 D:\New folder 2\MetaG6br.jpg
+	bump -bm 0.3000 D:\New folder 2\MetaG6br.jpg
