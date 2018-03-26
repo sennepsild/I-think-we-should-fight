@@ -11,6 +11,7 @@ public class BotWaypointPatrol : MonoBehaviour
     [Range(0f, 10f)]
     public float waypointDelayTime = 3.0f;
     private float wayPointDistance = 0.0f;
+    public float baseWaitTime = 20f;
     public float waypointThreshold = 5f;
     public Transform theChosenWaypoint = null;
     private bool notAtBase = false;
@@ -52,8 +53,14 @@ public class BotWaypointPatrol : MonoBehaviour
                 {
 
                     patroling = false;
-                    Invoke("DecideState", waypointDelayTime);
-
+                    if (notAtBase == true)
+                    {
+                        Invoke("DecideState", waypointDelayTime);
+                    }
+                    else
+                    {
+                        Invoke("DecideState", baseWaitTime);
+                    }
                 }
 
                 else if (theChosenWaypoint == waypoint[t] && waitOrNot[t] == false)
