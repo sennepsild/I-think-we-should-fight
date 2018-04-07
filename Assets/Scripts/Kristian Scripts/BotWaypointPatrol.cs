@@ -15,7 +15,7 @@ public class BotWaypointPatrol : MonoBehaviour
     public float waypointThreshold = 5f;
     public Transform theChosenWaypoint = null;
     private bool notAtBase = false;
-    private bool patroling = false;
+    public bool patroling = false;
 
     void Start()
     {
