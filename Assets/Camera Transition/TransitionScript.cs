@@ -21,7 +21,6 @@ public class TransitionScript : MonoBehaviour {
             currentView = views[1];
         }
 	}
-
 	void LateUpdate () {
 
         transform.position = Vector3.Lerp(transform.position, currentView.position, Time.deltaTime * transSpeed);
