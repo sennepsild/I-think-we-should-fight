@@ -262,6 +262,7 @@ ModelImporter:
     4300010: MocapGuy_Hat
     4300012: MocapGuy_Body
     7400000: Kick!
+    7400002: EnemyKick
     9500000: //RootNode
     13700000: MocapGuy_Body
     13700002: MocapGuy_BrowsLashes
@@ -341,6 +342,42 @@ ModelImporter:
         functionName: KickHit
         data: 
         objectReferenceParameter: {fileID: 11500000, guid: c6b483749e4d20540a279b209b0dac5f,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: EnemyKick
+      takeName: mixamo.com
+      firstFrame: 16
+      lastFrame: 50
+      wrapMode: 0
+      orientationOffsetY: -41.83
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events:
+      - time: 0.37204725
+        functionName: KickHit
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: f1629240c270e4a41ae11d53ed7eed2f,
           type: 3}
         floatParameter: 0
         intParameter: 0
