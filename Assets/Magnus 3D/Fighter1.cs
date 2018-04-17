@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Fighter1 : MonoBehaviour {
 
@@ -8,7 +9,16 @@ public class Fighter1 : MonoBehaviour {
     float kickSpeedMultiplier = 1;
     public float jumpHeight;
     public ParticleSystem explosion;
+
+    public float maxHealth = 100;
+    float health;
+
+    public Image bar;
     float cool = 0;
+
+    bool facingRight = true;
+
+
 
     public GameObject ExplosionPrefab;
     public Transform rFoot;
@@ -16,15 +26,16 @@ public class Fighter1 : MonoBehaviour {
     public Transform hand;
     public Transform enemy;
 
-    
 
 
-   
+
+
     AudioSource audio2;
 
     // Use this for initialization
     void Start()
     {
+        health = maxHealth;
         audio2 = GetComponent<AudioSource>();
         animator = GetComponent<Animator>();
 
@@ -42,20 +53,23 @@ public class Fighter1 : MonoBehaviour {
         else
             animator.SetBool("Crouching", false);
 
-
-        if (h > 0||IsGrounded()==false)
+        if (!facingRight)
+            h = h * -1;
+        if (h > 0 || IsGrounded() == false)
             h = h * 2;
 
-        transform.Translate(Vector3.forward * h * Time.deltaTime* kickSpeedMultiplier);
+
+
+        transform.Translate(Vector3.forward * h * Time.deltaTime * kickSpeedMultiplier);
         animator.SetFloat("Horizontal", h);
 
-        if (Input.GetButtonDown("Fire1")&& kickSpeedMultiplier!=0)
+        if (Input.GetButtonDown("Fire1") && kickSpeedMultiplier != 0)
             animator.SetTrigger("Punch1");
 
-        if (Input.GetButtonDown("Fire2") )
+        if (Input.GetButtonDown("Fire2"))
             animator.SetTrigger("Kick1");
 
-        if (Input.GetAxis("Vertical") > 0 && cool <= 0 && IsGrounded() && kickSpeedMultiplier ==1)
+        if (Input.GetAxis("Vertical") > 0 && cool <= 0 && IsGrounded() && kickSpeedMultiplier == 1)
         {
             print("jump!");
             cool = 0.5f;
@@ -63,13 +77,27 @@ public class Fighter1 : MonoBehaviour {
 
         }
 
-       
+
 
 
         if (IsGrounded() == false)
             animator.SetBool("Grounded", false);
         else
             animator.SetBool("Grounded", true);
+
+
+        if (transform.position.z < enemy.position.z)
+        {
+            facingRight = true;
+            transform.rotation = Quaternion.Euler(0, 0, 0);
+
+        }
+        else
+        {
+            facingRight = false;
+            transform.rotation = Quaternion.Euler(0, 180, 0);
+        }
+
 
 
 
@@ -80,7 +108,7 @@ public class Fighter1 : MonoBehaviour {
     public void StartKick()
     {
         kickSpeedMultiplier = 0;
-        
+
     }
     public void EndKick()
     {
@@ -103,8 +131,14 @@ public class Fighter1 : MonoBehaviour {
     public void Jump()
     {
 
-        
+
     }
+
+    public void PlayExplosionSOund()
+    {
+        audio2.Play();
+    }
+
     public void RealHit()
     {
         if (CheckIfHit(hand.transform))
@@ -114,7 +148,7 @@ public class Fighter1 : MonoBehaviour {
     }
     public void KickHit()
     {
-       GameObject exp = Instantiate(ExplosionPrefab);
+        GameObject exp = Instantiate(ExplosionPrefab);
         exp.transform.position = rFoot.position;
         Destroy(exp, 3);
         audio2.Play();
@@ -140,7 +174,16 @@ public class Fighter1 : MonoBehaviour {
 
     }
 
+    public void DAMAGE(){
 
+        animator.SetTrigger("Hit");
+        health -= 10;
+
+        enemy.gameObject.GetComponent<Enemy>().audio1.Play();
+        transform.Translate(Vector3.back * 0.1f);
+        bar.fillAmount = health / maxHealth;
+
+    }
 
     public bool CheckIfHit(Transform tPos)
     {

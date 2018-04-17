@@ -9,7 +9,7 @@ public class raycast : MonoBehaviour {
     // Use this for initialization
     void Start () {
 
-        StartCoroutine("AutoType");
+        //StartCoroutine("AutoType");
     }
 	
 	// Update is called once per frame
@@ -19,10 +19,10 @@ public class raycast : MonoBehaviour {
         if (Physics.Raycast(transform.position, transform.forward, out hit, 100))
         {
             //Debug.Log(hit.transform.name);
-            if (hit.transform.name == "SkelMesh_Bodyguard_04")
+            if (hit.transform.name == "NpcPrefab1")
             {
                 objectToToggle.SetActive(true);
-                Debug.Log("target is hit");
+                //Debug.Log("target is hit");
                 
             }
             else
