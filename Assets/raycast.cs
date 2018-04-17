@@ -18,8 +18,8 @@ public class raycast : MonoBehaviour {
         RaycastHit hit;
         if (Physics.Raycast(transform.position, transform.forward, out hit, 100))
         {
-            //Debug.Log(hit.transform.name);
-            if (hit.transform.name == "SkelMesh_Bodyguard_04")
+            Debug.Log(hit.transform.name);
+            if (hit.transform.name == "NpcPrefab1")
             {
                 objectToToggle.SetActive(true);
                 Debug.Log("target is hit");
