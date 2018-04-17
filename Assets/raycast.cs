@@ -5,12 +5,12 @@ using UnityEngine;
 public class raycast : MonoBehaviour {
 
     public GameObject objectToToggle;
-    //public bool activateHUD = false;
 
-	// Use this for initialization
-	void Start () {
-		
-	}
+    // Use this for initialization
+    void Start () {
+
+        StartCoroutine("AutoType");
+    }
 	
 	// Update is called once per frame
 	void Update () { 
