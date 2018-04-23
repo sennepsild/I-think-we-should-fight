@@ -6,14 +6,5 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Menu.unity
-    guid: 7453d84e89cafce44933c3055501ef0e
-  - enabled: 1
-    path: Assets/Navigation Scene.unity
-    guid: 973e8d38e5c54204cac647705a4805ec
-  - enabled: 1
-    path: Assets/Georgi stuff/game.unity
-    guid: b6e682ecaac0fc7428fe81b70792a1d4
-  - enabled: 1
-    path: Assets/Georgi stuff/FightMode.unity
-    guid: cba4471243cc0b0478fed105fa6309ba
+    path: Assets/SMall OfficeSPace.unity
+    guid: 9c0a3e88b96cab345bbeb7719a4eca47
