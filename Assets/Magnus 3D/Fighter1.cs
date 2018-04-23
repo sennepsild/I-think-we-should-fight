@@ -12,7 +12,7 @@ public class Fighter1 : MonoBehaviour {
 
     public float maxHealth = 100;
     float health;
-
+    public GameObject loseScreen;
     public Image bar;
     float cool = 0;
 
@@ -20,7 +20,7 @@ public class Fighter1 : MonoBehaviour {
 
     bool dead = false;
 
-
+    public raycast theLittleViewerScript;
     public GameObject ExplosionPrefab;
     public Transform rFoot;
     public Transform lFoot;
@@ -194,7 +194,7 @@ public class Fighter1 : MonoBehaviour {
             if (health <= 0)
             {
                 dead = true;
-
+                loseScreen.SetActive(true);
                 animator.SetBool("dead", true);
                 animator.SetTrigger("DIE");
                 Destroy(gameObject.GetComponent<Rigidbody>());

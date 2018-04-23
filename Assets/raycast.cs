@@ -15,7 +15,10 @@ public class raycast : MonoBehaviour {
     public GameObject[] fighter;
     public GameObject[] npc;
 
+    Transform parent;
 
+
+    bool isFighting = false;
 
     public GameObject objectToToggle;
     //public bool activateHUD = false;
@@ -27,47 +30,51 @@ public class raycast : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        bool looking = false;
-        
-        RaycastHit hit;
-        if (Physics.Raycast(transform.position, transform.forward, out hit, 100))
+        if (isFighting == false)
         {
-            //Debug.Log(hit.transform.name);
-            if (isNpc(hit.transform.gameObject))
+            bool looking = false;
+
+            RaycastHit hit;
+            if (Physics.Raycast(transform.position, transform.forward, out hit, 100))
             {
-
-                objectToToggle.SetActive(true);
+                //Debug.Log(hit.transform.name);
+                if (isNpc(hit.transform.gameObject))
                 {
-                    int index = GetFighterIndex(hit.transform.gameObject);
 
-                    Debug.Log("target is hit");
-                    looking = true;
-                    if (Input.GetButtonDown("Fire1"))
+                    objectToToggle.SetActive(true);
                     {
-                        fighter[index].SetActive(true);
-                        enemy.SetActive(true);
-                        lifeBars.SetActive(true);
-                        npc[index].SetActive(false);
-                        enemy.GetComponent<Fighter1>().enemy = fighter[index].transform;
+                        int index = GetFighterIndex(hit.transform.gameObject);
 
-                        Destroy( player.GetComponent<FirstPersonController>());
-                        print("FAGGOT!");
-                        currentView = views[1];
-                        transform.parent = null;
+                        Debug.Log("target is hit");
+                        looking = true;
+                        if (Input.GetButtonDown("Fire1"))
+                        {
+                            fighter[index].SetActive(true);
+                            enemy.SetActive(true);
+                            lifeBars.SetActive(true);
+                            npc[index].SetActive(false);
+                            enemy.GetComponent<Fighter1>().enemy = fighter[index].transform;
 
-                        
+                            player.GetComponent<FirstPersonController>().isInuse = false;
+                            print("FAGGOT!");
+                            currentView = views[1];
+                            parent = transform.parent;
+                            transform.parent = null;
+                            isFighting = true;
+                            objectToToggle.SetActive(false);
+
+                        }
                     }
                 }
+
             }
-            
+            if (!looking)
+            {
+                objectToToggle.SetActive(false);
+            }
+
+
         }
-        if(!looking)
-        {
-            objectToToggle.SetActive(false);
-        }
-
-
-
     }
 
     bool isNpc(GameObject target)
@@ -96,5 +103,15 @@ public class raycast : MonoBehaviour {
 
         transform.position = Vector3.Lerp(transform.position, currentView.position, Time.deltaTime * transSpeed);
         transform.rotation = Quaternion.Lerp(transform.rotation, currentView.rotation, Time.deltaTime * transSpeed);
+    }
+
+    public void ReturnToLook()
+    {
+        transform.parent = parent;
+        currentView = views[0];
+        player.GetComponent<FirstPersonController>().isInuse = true;
+        lifeBars.SetActive(false);
+        enemy.SetActive(false);
+        isFighting = false;
     }
 }

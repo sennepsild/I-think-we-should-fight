@@ -162,6 +162,8 @@ public class Enemy : MonoBehaviour {
 
             if (health <= 0)
             {
+                Anthem.Stop();
+                playerTrans.gameObject.GetComponent<Fighter1>().theLittleViewerScript.ReturnToLook();
                 dead = true;
                 anim.SetBool("Ultimate", false);
                 anim.SetBool("dead", true);
