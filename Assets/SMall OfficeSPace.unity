@@ -7717,6 +7717,11 @@ Prefab:
       propertyPath: npc
       value: 
       objectReference: {fileID: 1408125798}
+    - target: {fileID: 114710945647832490, guid: ac78a4d1e3534c5418bc937ff5269368,
+        type: 2}
+      propertyPath: m_StepInterval
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ac78a4d1e3534c5418bc937ff5269368, type: 2}
   m_IsPrefabParent: 0
