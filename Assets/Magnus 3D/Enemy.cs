@@ -10,6 +10,8 @@ public class Enemy : MonoBehaviour {
 
     public Transform rFoot,lFoot;
 
+    bool dead = false;
+
     public Transform playerTrans;
     public float maxHealth = 100;
     float health;
@@ -29,42 +31,45 @@ public class Enemy : MonoBehaviour {
         anim = GetComponent<Animator>();
         health = maxHealth;
 	}
-	
-	// Update is called once per frame
-	void Update () {
-        if (health > 50)
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (dead == false)
         {
-            if (GetDistanceTOPlayer() > 1.4f)
+            if (health > 50)
             {
-                if (duration <= 0)
+                if (GetDistanceTOPlayer() > 1.4f)
                 {
-                    transform.Translate(Vector3.forward * 0.5f * Time.deltaTime);
-                    anim.SetFloat("Horizontal", 0.5f);
+                    if (duration <= 0)
+                    {
+                        transform.Translate(Vector3.forward * 0.5f * Time.deltaTime);
+                        anim.SetFloat("Horizontal", 0.5f);
+                    }
+                }
+                else
+                {
+                    anim.SetFloat("Horizontal", 0);
+                    if (duration <= 0)
+                    {
+                        duration += 1.5f;
+                        DoATTACK();
+                    }
+
                 }
             }
             else
             {
-                anim.SetFloat("Horizontal", 0);
-                if (duration <= 0)
+                if (!Ultimating)
                 {
-                    duration += 1.5f;
-                    DoATTACK();
+                    shinderu.Play();
+                    Anthem.Play();
                 }
-
+                Ultimating = true;
+                anim.SetBool("Ultimate", true);
             }
-        }
-        else
-        {
-            if (!Ultimating)
-            {
-                shinderu.Play();
-                Anthem.Play();
-            }
-            Ultimating = true;
-            anim.SetBool("Ultimate", true);
-        }
 
-        if (transform.position.z < playerTrans.position.z)
+            if (transform.position.z < playerTrans.position.z)
             {
                 transform.rotation = Quaternion.Euler(0, 0, 0);
 
@@ -73,11 +78,15 @@ public class Enemy : MonoBehaviour {
             {
                 transform.rotation = Quaternion.Euler(0, 180, 0);
             }
-        
 
-            if(duration>0)
-        duration -= Time.deltaTime;
 
+            if (duration > 0)
+                duration -= Time.deltaTime;
+            
+        }
+
+
+       
     }
 
     public void DoATTACK()
@@ -139,14 +148,28 @@ public class Enemy : MonoBehaviour {
 
     public void Hit()
     {
-        print(anim.name);
-        if(!Ultimating)
-        anim.SetTrigger("Hit");
-        health-= 10;
-        audio1.Play();
+        if (dead == false)
+        {
+            print(anim.name);
+            if (!Ultimating)
+                anim.SetTrigger("Hit");
+            health -= 10;
+            audio1.Play();
 
-        transform.Translate(Vector3.back*0.1f);
-        bar.fillAmount = health / maxHealth;
+            transform.Translate(Vector3.back * 0.1f);
+            bar.fillAmount = health / maxHealth;
+
+
+            if (health <= 0)
+            {
+                dead = true;
+                anim.SetBool("Ultimate", false);
+                anim.SetBool("dead", true);
+                anim.SetTrigger("DIE");
+                Destroy(gameObject.GetComponent<Rigidbody>());
+                Destroy(gameObject.GetComponent<CapsuleCollider>());
+            }
+        }
     }
 
 

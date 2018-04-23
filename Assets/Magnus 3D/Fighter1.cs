@@ -18,6 +18,7 @@ public class Fighter1 : MonoBehaviour {
 
     bool facingRight = true;
 
+    bool dead = false;
 
 
     public GameObject ExplosionPrefab;
@@ -44,63 +45,68 @@ public class Fighter1 : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        cool -= Time.deltaTime;
-
-        float h = Input.GetAxis("Horizontal");
-
-        if (Input.GetAxis("Vertical") < 0)
-            animator.SetBool("Crouching", true);
-        else
-            animator.SetBool("Crouching", false);
-
-        if (!facingRight)
-            h = h * -1;
-        if (h > 0 || IsGrounded() == false)
-            h = h * 2;
-
-
-
-        transform.Translate(Vector3.forward * h * Time.deltaTime * kickSpeedMultiplier);
-        animator.SetFloat("Horizontal", h);
-
-        if (Input.GetButtonDown("Fire1") && kickSpeedMultiplier != 0)
-            animator.SetTrigger("Punch1");
-
-        if (Input.GetButtonDown("Fire2"))
-            animator.SetTrigger("Kick1");
-
-        if (Input.GetAxis("Vertical") > 0 && cool <= 0 && IsGrounded() && kickSpeedMultiplier == 1)
+        if (dead == false)
         {
-            print("jump!");
-            cool = 0.5f;
-            GetComponent<Rigidbody>().AddForce(Vector3.up * jumpHeight);
+            cool -= Time.deltaTime;
+
+            float h = Input.GetAxis("Horizontal");
+
+            if (Input.GetAxis("Vertical") < 0)
+                animator.SetBool("Crouching", true);
+            else
+                animator.SetBool("Crouching", false);
+
+            if (!facingRight)
+                h = h * -1;
+            if (h > 0 || IsGrounded() == false)
+                h = h * 2;
+
+
+
+            transform.Translate(Vector3.forward * h * Time.deltaTime * kickSpeedMultiplier);
+            animator.SetFloat("Horizontal", h);
+
+            if (Input.GetButtonDown("Fire1") && kickSpeedMultiplier != 0)
+                animator.SetTrigger("Punch1");
+
+            if (Input.GetButtonDown("Fire2"))
+                animator.SetTrigger("Kick1");
+
+            if (Input.GetAxis("Vertical") > 0 && cool <= 0 && IsGrounded() && kickSpeedMultiplier == 1)
+            {
+                print("jump!");
+                cool = 0.5f;
+                GetComponent<Rigidbody>().AddForce(Vector3.up * jumpHeight);
+
+            }
+
+
+
+
+            if (IsGrounded() == false)
+                animator.SetBool("Grounded", false);
+            else
+                animator.SetBool("Grounded", true);
+
+
+            if (transform.position.z < enemy.position.z)
+            {
+                facingRight = true;
+                transform.rotation = Quaternion.Euler(0, 0, 0);
+
+            }
+            else
+            {
+                facingRight = false;
+                transform.rotation = Quaternion.Euler(0, 180, 0);
+            }
+
+
+
 
         }
 
-
-
-
-        if (IsGrounded() == false)
-            animator.SetBool("Grounded", false);
-        else
-            animator.SetBool("Grounded", true);
-
-
-        if (transform.position.z < enemy.position.z)
-        {
-            facingRight = true;
-            transform.rotation = Quaternion.Euler(0, 0, 0);
-
-        }
-        else
-        {
-            facingRight = false;
-            transform.rotation = Quaternion.Euler(0, 180, 0);
-        }
-
-
-
-
+        
 
     }
 
@@ -175,14 +181,26 @@ public class Fighter1 : MonoBehaviour {
     }
 
     public void DAMAGE(){
+        if (dead == false)
+        {
+            animator.SetTrigger("Hit");
+            health -= 10;
 
-        animator.SetTrigger("Hit");
-        health -= 10;
+            enemy.gameObject.GetComponent<Enemy>().audio1.Play();
+            transform.Translate(Vector3.back * 0.1f);
+            bar.fillAmount = health / maxHealth;
 
-        enemy.gameObject.GetComponent<Enemy>().audio1.Play();
-        transform.Translate(Vector3.back * 0.1f);
-        bar.fillAmount = health / maxHealth;
 
+            if (health <= 0)
+            {
+                dead = true;
+
+                animator.SetBool("dead", true);
+                animator.SetTrigger("DIE");
+                Destroy(gameObject.GetComponent<Rigidbody>());
+                Destroy(gameObject.GetComponent<CapsuleCollider>());
+            }
+        }
     }
 
     public bool CheckIfHit(Transform tPos)
