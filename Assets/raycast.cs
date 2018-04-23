@@ -11,8 +11,9 @@ public class raycast : MonoBehaviour {
     bool TargetChosen = false;
     public GameObject player;
 
-    public GameObject fighter, enemy,lifeBars;
-    public GameObject npc;
+    public GameObject  enemy,lifeBars;
+    public GameObject[] fighter;
+    public GameObject[] npc;
 
 
 
@@ -32,18 +33,22 @@ public class raycast : MonoBehaviour {
         if (Physics.Raycast(transform.position, transform.forward, out hit, 100))
         {
             //Debug.Log(hit.transform.name);
-            if (hit.transform.name == "NpcPrefab1")
+            if (isNpc(hit.transform.gameObject))
             {
+
                 objectToToggle.SetActive(true);
                 {
+                    int index = GetFighterIndex(hit.transform.gameObject);
+
                     Debug.Log("target is hit");
                     looking = true;
                     if (Input.GetButtonDown("Fire1"))
                     {
-                        fighter.SetActive(true);
+                        fighter[index].SetActive(true);
                         enemy.SetActive(true);
                         lifeBars.SetActive(true);
-                        npc.SetActive(false);
+                        npc[index].SetActive(false);
+                        enemy.GetComponent<Fighter1>().enemy = fighter[index].transform;
 
                         Destroy( player.GetComponent<FirstPersonController>());
                         print("FAGGOT!");
@@ -63,6 +68,26 @@ public class raycast : MonoBehaviour {
 
 
 
+    }
+
+    bool isNpc(GameObject target)
+    {
+        for (int i = 0; i < npc.Length; i++)
+        {
+            if (target == npc[i])
+                return true;
+        }
+        return false;
+    }
+
+    int GetFighterIndex(GameObject target)
+    {
+        for (int i = 0; i < npc.Length; i++)
+        {
+            if (target == npc[i])
+                return i;
+        }
+        return 1000;
     }
 
 
