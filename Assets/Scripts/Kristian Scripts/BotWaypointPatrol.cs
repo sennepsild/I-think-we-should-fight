@@ -3,7 +3,7 @@ using System.Collections;
 
 public class BotWaypointPatrol : MonoBehaviour
 {
-
+    
     public Transform[] waypoint;
     public bool[] waitOrNot;
     [Range(0f, 50f)]
@@ -12,10 +12,11 @@ public class BotWaypointPatrol : MonoBehaviour
     public float waypointDelayTime = 3.0f;
     private float wayPointDistance = 0.0f;
     public float baseWaitTime = 20f;
-    public float waypointThreshold = 5f;
+    public float waypointThreshold = 0.5f;
     public Transform theChosenWaypoint = null;
     private bool notAtBase = false;
     public bool patroling = false;
+    public float rotSpeed = 0.2f;
 
     void Start()
     {
@@ -27,6 +28,8 @@ public class BotWaypointPatrol : MonoBehaviour
 
     void Update()
     {
+        
+        
 
         if (theChosenWaypoint != null)
         {
@@ -37,8 +40,9 @@ public class BotWaypointPatrol : MonoBehaviour
 
         if (patroling == true && wayPointDistance > waypointThreshold && theChosenWaypoint != null)
         {
-
-            this.transform.LookAt(theChosenWaypoint);
+            //this.transform.LookAt(theChosenWaypoint);
+            Vector3 direction = theChosenWaypoint.transform.position - transform.position;
+            this.transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(direction), rotSpeed * Time.deltaTime);
             this.transform.Translate(patrolSpeed * Vector3.forward * Time.deltaTime);
 
         }
