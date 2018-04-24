@@ -11,7 +11,7 @@ public class Enemy : MonoBehaviour {
     public Transform rFoot,lFoot;
 
     bool dead = false;
-
+    public bool SHINDERU;
     public Transform playerTrans;
     public float maxHealth = 100;
     float health;
@@ -37,7 +37,19 @@ public class Enemy : MonoBehaviour {
     {
         if (dead == false)
         {
-            if (health > 50)
+            if (SHINDERU && health < 60)
+            {
+
+                if (!Ultimating)
+                {
+                    shinderu.Play();
+                    Anthem.Play();
+                }
+                Ultimating = true;
+                anim.SetBool("Ultimate", true);
+                
+            }
+            else 
             {
                 if (GetDistanceTOPlayer() > 1.4f)
                 {
@@ -57,16 +69,6 @@ public class Enemy : MonoBehaviour {
                     }
 
                 }
-            }
-            else
-            {
-                if (!Ultimating)
-                {
-                    shinderu.Play();
-                    Anthem.Play();
-                }
-                Ultimating = true;
-                anim.SetBool("Ultimate", true);
             }
 
             if (transform.position.z < playerTrans.position.z)
